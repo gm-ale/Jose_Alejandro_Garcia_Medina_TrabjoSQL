@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Definimos nuestro Head utilizando meta etiquetas para configurar sus dimensiones -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GARBOR</title>
+
+    <!-- Enlace a ESTILOS -->
+    <link rel="stylesheet" href="./estilos/estilos.css">
+    <link rel="stylesheet" href="./estilos/footer_style.css">
+    <link rel="stylesheet" href="./estilos/nav.css">
+
+    <!-- Enlace a BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <!-- Enlace a ICONOS BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <!-- 1º Definimos el NAV de nuestro sitio-web -->
+    <!-- 2º Creamos Secciones Body -->
+    <!-- 3º Slider principal (imagen fija) -->
+    <!-- 4º Sección introducción de servicios con CARDS -->
+    <!-- 5º Sección img grande a un lado + texto en el otro -->
+    <!-- 6º Sección de preguntas frecuentes + desplegable -->
+    <!-- 7º Carrusel de trabajos -->
+    <!-- 8º Footer -->
+
+
+        <!-- NAVBAR -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+                <div class="container">
+            
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="/index.html">
+                        <img src="./img/iconos/logogarbor_blanco.png" alt="GARBOR" class="nav-logo">
+                    </a>
+            
+                    <!-- Botón mobile -->
+                    <button class="navbar-toggler" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                    <!-- Menú -->
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./vistas/galeria.html">Galería</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./vistas/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+            
+                </div>
+            </nav>
+        </header>
+
+
+    <main>
+        <!-- Slider Principal / HERO (imagen fija) -->
+        <!-- Se utiliza una imagen representativa con texto y botón CTA -->
+        <section class="hero position-relative">
+            <img src="./img/slidergarbor1.jpg" class="img-fluid w-100" alt="Diseño textil Garbor">
+
+            <div class="hero-content position-absolute top-50 start-50 translate-middle text-center text-light px-3">
+                <h1 class="fw-bold text-uppercase">
+                    Diseño textil que habla por tu marca
+                </h1>
+
+                <p class="lead mt-3">
+                    Diseñamos, confeccionamos y personalizamos prendas para empresas y particulares, cuidando cada detalle desde la idea inicial hasta el acabado final.
+                </p>
+
+                <a href="./vistas/contacto.html" class="btn btn-primary btn-lg mt-3 px-5">
+                    CONTÁCTANOS
+                </a>
+            </div>
+        </section>
+
+        <!-- En esta SECTION introducimos los tres servicios principales por medio de CARDS -->
+        <!-- 1º Se utiliza un grid con imagen, título y breve descripción -->
+        <section class="services py-5 bg-light">
+            <div class="container">
+                <div class="container text-center">
+                    <h2 class="mb-4">Soluciones textiles a medida</h2>
+                    <p class="mb-5">
+                        En GARBOR damos forma a proyectos textiles únicos. 
+                        Trabajamos bajo pedido y presupuesto, adaptándonos a las necesidades reales de cada cliente con un trato cercano, transparente y profesional.                    
+                    </p>
+                </div>
+            </div>
+        <!-- Cada card incluye imagen grande, texto extenso y botón -->
+                <div class="row g-4">
+
+                    <div class="col-md-4 d-flex">
+                        <div class="card service-card h-100">
+                            <img src="./img/diseño_card1.jpg" class="card-img-top" alt="Diseño a medida">
+                            <div class="card-body">
+                                <h2 class="card-title">Diseño a medida</h2>
+                                <p class="card-text">
+                                    Creamos prendas y colecciones personalizadas que reflejan la identidad de tu marca, evento o proyecto, cuidando el diseño y la funcionalidad.
+                                </p>
+                                <a href="#" class="btn btn-outline-dark">Saber más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 d-flex">
+                        <div class="card service-card h-100">
+                            <img src="./img/serigrafia2.jpg" class="card-img-top" alt="Estampado y serigrafía">
+                            <div class="card-body">
+                                <h2 class="card-title">Estampado y serigrafía</h2>
+                                <p class="card-text">
+                                    Aplicamos técnicas de serigrafía, DTF y otras soluciones de impresión con acabados duraderos y colores de alta calidad.
+                                </p>
+                                <a href="#" class="btn btn-outline-dark">Saber más</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 d-flex">
+                        <div class="card service-card h-100">
+                            <div class="card h-100">
+                                <img src="./img/ajuste_bordadora.jpg" class="card-img-top" alt="Bordado profesional">
+                                <div class="card-body">
+                                    <h2 class="card-title">Bordado profesional</h2>
+                                    <p class="card-text">
+                                        Bordados precisos y resistentes que aportan un acabado elegante y profesional a uniformes y prendas corporativas.
+                                    </p>
+                                    <a href="#" class="btn btn-outline-dark">Saber más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 d-flex">
+                        <div class="card service-card h-100">
+                            <div class="card h-100">
+                                <img src="./img/uniformes.jpg" class="card-img-top" alt="Ropa laboral y uniformes">
+                                <div class="card-body">
+                                    <h2 class="card-title">Ropa laboral y uniformes</h2>
+                                    <p class="card-text">
+                                        Diseñamos y producimos vestuario laboral cómodo, resistente y alineado con la imagen corporativa de cada empresa.
+                                    </p>
+                                    <a href="#" class="btn btn-outline-dark">Saber más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 d-flex">
+                        <div class="card service-card h-100">
+                            <div class="card h-100">
+                                <img src="./img/maquina_costura.jpg" class="card-img-top" alt="Producción textil">
+                                <div class="card-body">
+                                    <h2 class="card-title">Producción textil</h2>
+                                    <p class="card-text">
+                                        Nos encargamos de la confección y producción de prendas en pequeñas y medianas cantidades, manteniendo siempre el control de calidad.
+                                    </p>
+                                    <a href="#" class="btn btn-outline-dark">Saber más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 d-flex">
+                        <div class="card service-card h-100">
+                            <div class="card h-100">
+                                <img src="./img/ajuste_personalizado.jpg" class="card-img-top" alt="Personalización integral">
+                                <div class="card-body">
+                                    <h2 class="card-title">Personalización integral</h2>
+                                    <p class="card-text">
+                                        Te asesoramos en todo el proceso para elegir la técnica y el acabado más adecuado según el uso y tipo de prenda.
+                                    </p>
+                                    <a href="#" class="btn btn-outline-dark">Saber más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- En esta SECTION mostraremos un texto + imagen -->
+        <!-- Sección separadora entre las cards y el carrusel -->
+        <section class="feature py-5 bg-light">
+            <div class="container">
+
+                <div class="row align-items-center g-5">
+                    
+                    <!-- Columna de texto -->
+                    <div class="col-md-6 about-text">
+                        <h3 class="mb-3">Diseño textil pensado para durar</h3>
+
+                        <p class="mb-4">
+                            Somos una empresa familiar con una forma de trabajar basada en la confianza, la cercanía y la transparencia. 
+                            Cada proyecto lo tratamos como único, acompañando al cliente desde la idea inicial hasta la entrega final.
+                        </p>
+
+                        <a href="#" class="btn btn-primary">
+                            Conoce Garbor
+                        </a>
+                    </div>
+
+                    <!-- Columna de imagen -->
+                    <div class="col-md-6 text-center">
+                        <figure class="m-0">
+                            <img src="./img/img_garbor1.jpg"
+                                class="img-fluid rounded about-image"
+                                alt="Instalaciones y trabajo en GARBOR">
+                        </figure>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- En esta SECTION crearemos un carrusel de imágenes -->
+        <!-- Mostrará algunos de los trabajos realizados -->
+        <section class="works-carousel py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Proyectos realizados</h2>
+
+                <div id="trabajosCarousel" class="carousel slide works-slider" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img src="./img/img_garbor4.jpg" class="d-block w-100" alt="">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./img/carrusel1.jpg" class="d-block w-100" alt="">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./img/carrusel2.jpg" class="d-block w-100" alt="">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./img/carrusel3.jpg" class="d-block w-100" alt="">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./img/carrusel4.jpg" class="d-block w-100" alt="">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./img/carrusel5.jpg" class="d-block w-100" alt="">
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" data-bs-target="#trabajosCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" data-bs-target="#trabajosCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- En esta SECTION un módulo de preguntas F&Q -->
+        <!-- Mostrará algunas de las preguntas más frecuentes mediante un desplegable -->
+        <section class="faq py-5">
+            <div class="container">
+
+                <!-- Título sección -->
+                <div class="text-center mb-5">
+                    <h2 class="mb-3">Preguntas frecuentes</h2>
+                    <p>
+                        Resolvemos algunas de las dudas más habituales sobre nuestros servicios
+                        y procesos de trabajo.
+                    </p>
+                </div>
+
+                <!-- Accordion Bootstrap -->
+                <div class="accordion faq-accordion" id="faqAccordion">
+
+                    <!-- Pregunta 1 -->
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                ¿Qué tipos de personalización ofrecéis?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Trabajamos con técnicas como bordado, serigrafía,
+                                sublimación, estampado DTF y otras técnicas adaptadas al tipo de prenda y uso final. 
+                                Nos adaptamos a cada necesidad.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                ¿Realizáis pedidos personalizados para empresas?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sí, realizamos pedidos personalizados tanto para empresas
+                                como para particulares, ajustándonos a la identidad corporativa.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                ¿Cuál es el plazo de entrega habitual?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                El plazo depende del tipo de trabajo y volumen del pedido,
+                                aunque normalmente oscila entre 5 y 10 días laborables.
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Pregunta 4 -->
+                     <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq4">
+                                ¿Cuál es el plazo de entrega habitual?
+                            </button>
+                        </h3>
+                        <div id="faq4" class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                El plazo depende del tipo de trabajo y volumen del pedido,
+                                aunque normalmente oscila entre 5 y 10 días laborables.
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Pregunta 5 -->
+                     <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq5">
+                                ¿Cuál es el plazo de entrega habitual?
+                            </button>
+                        </h3>
+                        <div id="faq5" class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                El plazo depende del tipo de trabajo y volumen del pedido,
+                                aunque normalmente oscila entre 5 y 10 días laborables.
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Pregunta 6 -->
+                     <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq6">
+                                ¿Cuál es el plazo de entrega habitual?
+                            </button>
+                        </h3>
+                        <div id="faq6" class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                El plazo depende del tipo de trabajo y volumen del pedido,
+                                aunque normalmente oscila entre 5 y 10 días laborables.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- En esta SECTION se mostrará un módulo de suscripción a la newsletter -->
+        <!-- Se utilizará un fondo de color distinto para destacar el formulario -->
+        <section class="newsletter py-5 bg-dark text-light">
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+
+                        <!-- Texto introductorio -->
+                        <p class="mb-2">
+                            Mantente al día de nuestras novedades
+                        </p>
+
+                        <h3 class="mb-4">
+                            Suscríbete a nuestra newsletter
+                        </h3>
+
+                        <!-- Formulario de suscripción -->
+                        <form class="newsletter-form">
+                            <div class="input-group input-group-lg">
+
+                                <input type="email"
+                                    class="form-control rounded-start-pill"
+                                    placeholder="Enter your email"
+                                    aria-label="Email">
+
+                                <button class="btn btn-primary rounded-end-pill" type="submit">
+                                    Enviar
+                                </button>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- En esta SECTION expondremos 3 características de ¿Por qué elegir GARBOR? -->
+        <!-- Se utiliza un grid con imagen, título y breve descripción -->
+        <section class="features py-5">
+            <div class="container text-center">
+                <h2 class="mb-4">¿Por qué elegir GARBOR?</h2>
+                <p class="mb-5">
+                    En GARBOR apostamos por la calidad, el trato cercano y la honestidad en cada proyecto textil que realizamos.
+                </p>
+
+                <div class="row g-4">
+                    <div class="col-md-4 feature-item">
+                        <img src="./img/iconos/calibre-vernier.png" class="feature-icon img-fluid mb-3" alt="Diseño a medida">
+                        <h3>Trabajos a medida</h3>
+                        <p>Cada proyecto se adapta a tus necesidades reales..</p>
+                    </div>
+
+                    <div class="col-md-4 feature-item">
+                        <img src="./img/iconos/reloj-de-pared.png" class="feature-icon img-fluid mb-3" alt="Estampado y serigrafía">
+                        <h3>Cumplimos plazos</h3>
+                        <p>Organización y compromiso en cada entrega.</p>
+                    </div>
+
+                    <div class="col-md-4 feature-item">
+                        <img src="./img/iconos/calidad.png" class="feature-icon img-fluid mb-3" alt="Bordado profesional">
+                        <h3>Calidad y confianza</h3>
+                        <p>Materiales, acabados y procesos cuidados al detalle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- FOOTER PRINCIPAL -->
+    <footer class="footer bg-dark text-light py-4">
+        <div class="container">
+    
+            <div class="row">
+    
+                <!-- Marca + contacto -->
+                <div class="col-md-4">
+                    <h2>GARBOR</h2>
+    
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="bi bi-telephone"></i>
+                            <a href="tel:+34600123456">+34 600 123 456</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope"></i>
+                            <a href="mailto:info@garbor.com">info@garbor.com</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt"></i>
+                            Gran Canaria, España
+                        </li>
+                    </ul>
+    
+                    <small>© 2026 All Rights Reserved · GARBOR</small>
+                </div>
+    
+                <!-- Menú -->
+                <div class="col-md-4">
+                    <h2>Menú</h2>
+                    <ul class="footer-links">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./vistas/galeria.html">Galería</a></li>
+                        <li><a href="./vistas/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Redes sociales -->
+                <div class="col-md-4">
+                    <h2>Síguenos</h2>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/garbor_moda/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/garbormoda" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@garbormoda" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <!-- Legal -->
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <span>|</span>
+                <a href="#">Order Conditions</a>
+                <span>|</span>
+                <a href="#">Terms & Conditions</a>
+            </div>
+    
+        </div>
+    </footer>
+
+    <!-- Enlace a JS de BootStrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

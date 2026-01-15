@@ -1,0 +1,150 @@
+/* =====================================================
+   FOOTER - ESTILO GLOBAL
+===================================================== */
+
+.footer {
+    font-family: var(--font-primary);
+    background-color: var(--color-dark);
+    color: var(--color-light-gray);
+    font-size: 0.95rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Enlaces generales */
+.footer a {
+    color: var(--color-light-gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover,
+.footer a:focus {
+    color: var(--color-primary);
+}
+
+/* Títulos del footer */
+.footer h2 {
+    color: var(--color-white);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+/* Texto descriptivo */
+.footer .footer-text {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    max-width: 260px;
+}
+
+/* =====================================================
+   FOOTER - MENÚ / LINKS
+===================================================== */
+
+.footer .footer-links {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer .footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+/* =====================================================
+   FOOTER - REDES SOCIALES
+===================================================== */
+
+.footer .footer-social {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.footer .footer-social a {
+    font-size: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .footer-social a:hover,
+.footer .footer-social a:focus {
+    transform: translateY(-3px);
+}
+
+/* =====================================================
+   FOOTER - ZONA LEGAL
+===================================================== */
+
+.footer .footer-legal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.85rem;
+    color: #aaa;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer .footer-legal a {
+    color: #aaa;
+}
+
+.footer .footer-legal a:hover,
+.footer .footer-legal a:focus {
+    color: var(--color-primary);
+}
+
+.footer .footer-legal span {
+    opacity: 0.5;
+}
+
+/* Copyright */
+.footer small {
+    display: block;
+    margin-top: 0.75rem;
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+/* =====================================================
+   FOOTER - RESPONSIVE (MÓVIL)
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer .footer-text {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer .footer-social {
+        justify-content: center;
+    }
+
+    .footer .footer-links {
+        align-items: center;
+    }
+
+    .footer h2 {
+        margin-top: 1.5rem;
+    }
+
+    .footer .footer-legal {
+        font-size: 0.8rem;
+        gap: 0.4rem;
+    }
+}

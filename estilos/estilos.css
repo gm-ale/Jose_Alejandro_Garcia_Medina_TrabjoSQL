@@ -1,0 +1,493 @@
+/* Lo primero que defiunimos es la tipográfia con la que vamos a trabajar */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap');
+
+/* =========================
+   VARIABLES GLOBALES
+   ========================= */
+/*Lo siguiente que definimos es la paleta de colores de nuestra web */
+:root {
+    /* Colores base */
+    --color-black: #0f0f0f;
+    --color-dark: #1c1c1c;
+    --color-gray: #6c757d;
+    --color-light-gray: #f5f5f5;
+    --color-white: #ffffff;
+
+    /* Color acento */
+    --color-primary: #b89b5e; /* dorado textil elegante */
+
+    /* Tipografía */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+
+    /* Sombras */
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    /* Bordes */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+
+    /* Transiciones */
+    --transition-base: all 0.3s ease;
+}
+
+/* =========================
+   RESET BÁSICO
+   ========================= */
+   *,
+   *::before,
+   *::after {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+   }
+
+   /* =========================
+   ESTILOS GENERALES
+   ========================= */
+body {
+    font-family: var(--font-primary);
+    color: var(--color-dark);
+    background-color: var(--color-white);
+    line-height: 1.6;
+}
+
+   /* =========================
+   ESTILOS TIPOGRAFÍA
+   ========================= */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+p {
+    color: var(--color-gray);
+    font-size: 1rem;
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+   .btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+    transition: var(--transition-base);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-black);
+    border-color: var(--color-black);
+}
+
+.btn-outline-dark {
+    border-radius: var(--radius-sm);
+    transition: var(--transition-base);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+/* =========================
+   IMAGENES
+   ========================= */
+img {
+    max-width: 100%;
+    display: block;
+}
+/* =========================
+   CONTENEDORES DE SECCION
+   ========================= */
+section {
+    position: relative;
+}
+
+
+
+
+/* =========================
+   HERO / SLIDER PRINCIPAL
+   ========================= */
+   .hero {
+    min-height: 90vh;
+    overflow: hidden;
+}
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* OVERLAY OSCURO */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+/* CAPA DE TXT (Z-INDEX) */
+.hero > div {
+    z-index: 2;
+    max-width: 900px;
+}
+/* TIPOGRAFÍA DEL HERO */ 
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: 1px;
+    color: var(--color-white);
+}
+.hero p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+/* BOTON CTA DEL HERO */
+.hero .btn-primary {
+    padding: 0.75rem 2.5rem;
+    font-size: 1rem;
+    border-radius: var(--radius-md);
+}
+/* AJUSTES MOBILE */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 75vh;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+
+
+/* =========================
+   SECCIÓN SERVICIOS
+   ========================= */
+   .services {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.services h2 {
+    font-weight: 600;
+}
+.services p {
+    color: #666;
+}
+/* ESTILOS DE LAS CARDS */
+.services .card {
+    height: 100%;
+    border: none;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.services .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+/* IMAGENES DE LAS CARDS*/
+.services .card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+/* TEXTO DE LAS CARDS */
+.services .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.services .card-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+/* BOTON SABER MÁS*/
+.services .btn-outline-dark {
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 1.4rem;
+    font-size: 0.9rem;
+}
+/* PARA MEJORAR JERARQUIA VISUAL */
+.services .container > h2 {
+    margin-bottom: 0.5rem;
+}
+
+
+
+/* =========================
+   SECCIÓN TEXTO + IMAGEN
+   ========================= */
+   .feature {
+    background-color: #f7f7f7;
+}
+
+/* TEXTOS y TITULOS */
+.feature h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    color: #555;
+    line-height: 1.6;
+    max-width: 520px;
+}
+
+/* DIMENSIONE DE IMAGENES */
+.feature img {
+    border-radius: var(--radius-md);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+
+
+
+/* =========================
+   FAQ / PREGUNTAS FRECUENTES
+   ========================= */
+   .faq {
+    background-color: #fff;
+}
+/* TARJETAS DEL ACORDEON */
+.faq .accordion-item {
+    border: none;
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+/*BOTON DE LA PREGUNTA */
+.faq .accordion-button {
+    font-weight: 500;
+    padding: 1.2rem;
+    background-color: #f8f8f8;
+}
+.faq .accordion-button:not(.collapsed) {
+    background-color: #fff;
+    color: var(--color-primary);
+}
+/* ICONOS DE LAS FLECHAS */
+.faq .accordion-button::after {
+    transition: transform 0.3s ease;
+}
+/* TEXTOS DE RESPUESTA*/
+.faq .accordion-body {
+    color: #555;
+    line-height: 1.6;
+}
+
+
+
+/* =========================
+   CARRUSEL DE TRABAJOS
+========================= */
+
+.works-carousel {
+    background-color: #fff;
+}
+
+/* CONTENEDOR DEL CARRUSEL */
+.works-carousel .carousel-inner {
+    border-radius: var(--radius-md);
+    overflow: hidden; /* MUY IMPORTANTE */
+}
+
+/* CONTROL DE ALTURAS E IMÁGENES */
+.works-carousel .carousel-item img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+/* TRANSICIÓN SUAVE */
+.works-carousel .carousel-item {
+    transition: transform 0.6s ease;
+}
+
+/* CONTROLES DEL CARRUSEL */
+.works-carousel .carousel-control-prev-icon,
+.works-carousel .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* TÍTULO DE LA SECCIÓN */
+.works-carousel h2 {
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .works-carousel .carousel-item img {
+        height: 260px;
+    }
+}
+
+
+
+
+/* =========================
+   NEWSLETTER
+   ========================= */
+   .newsletter {
+    background-color: #1f1f1f;
+}
+
+.newsletter p {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.newsletter h3 {
+    font-weight: 600;
+}
+/* INPUT + BOTON */
+.newsletter .form-control {
+    border: none;
+    padding-left: 1.5rem;
+}
+
+.newsletter .form-control:focus {
+    box-shadow: none;
+}
+
+.newsletter .btn-primary {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+
+/* =========================
+   CARACTERÍSTICAS
+   ========================= */
+   .features {
+    background-color: #f9f9f9;
+}
+/* BLOQUES INDIVIDUALES  */
+.features img {
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 70px;
+}
+/* TEXTOS Y TITULOS */
+.features h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.features p {
+    font-size: 0.95rem;
+    color: #666;
+    max-width: 280px;
+    margin: 0 auto;
+}
+.features .col-md-4 {
+    text-align: center;
+}
+.features .col-md-4 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features .col-md-4:hover {
+    transform: translateY(-6px);
+}
+
+/*===============================================================================================================================================================================*/
+/*===============================================================================================================================================================================*/
+/*===============================================================================================================================================================================*/
+
+
+/* =========================
+   GALERÍA – BASE
+   ========================= */
+
+/* SE PODRÁ VER DESDE EL ARCHIVO /estilos/ galeria_style.css */
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+/* SE PODRÁ VER DESDE EL ARCHIVO /estilos/ footer_style.css */
+
+/*===============================================================================================================================================================================*/
+/*===============================================================================================================================================================================*/
+/*===============================================================================================================================================================================*/
+
+
+
+/* =========================
+   CONTACTO - ESTRUCTURA
+========================= */
+
+main section {
+    scroll-margin-top: 90px; /* por el navbar sticky */
+}
+
+section > .container h1,
+section > .container h2,
+section > .container h3 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   FORMULARIO CONTACTO
+========================= */
+
+form .form-control {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+/* ESTADOS FOCUS */
+form .form-control:focus {
+    border-color: #212529;
+    box-shadow: 0 0 0 0.15rem rgba(33, 37, 41, 0.15);
+}
+/* =========================
+   BOTONES CONTACTO
+========================= */
+
+form button {
+    min-width: 160px;
+    border-radius: 30px;
+    padding: 0.6rem 1.8rem;
+    font-weight: 500;
+}
+
+form .btn-primary {
+    background-color: #212529;
+    border-color: #212529;
+}
+
+form .btn-primary:hover {
+    background-color: #000;
+    border-color: #000;
+}
+
+form .btn-outline-secondary:hover {
+    background-color: #f1f1f1;
+}
+/* =========================
+   MAPA CONTACTO
+========================= */
+
+.ratio iframe {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+/* ESPACIADO ENTRE BLOQUES */
+.col-md-6 > h2,
+.col-md-6 > h3 {
+    margin-bottom: 1.5rem;
+}
+/* LABELS */
+form .form-label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
